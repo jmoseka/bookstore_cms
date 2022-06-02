@@ -1,7 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Card from '../UI/Card';
-import './Book.css';
 
 const Books = (props) => {
   const bkList = props;

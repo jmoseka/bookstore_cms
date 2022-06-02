@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => (
@@ -8,8 +9,8 @@ const Header = () => (
       <h1>Bookstore CMS</h1>
     </div>
     <ul className="nav list-unstyled d-flex justify-content-between">
-      <li className="pe-4">BOOKS</li>
-      <li>CATGORIES</li>
+      <li className="pe-4"><Link to="/">BOOKS</Link></li>
+      <li className="pe-4"><Link to="/categories">CATEGORIES</Link></li>
     </ul>
   </header>
 );

@@ -1,4 +1,5 @@
 import { AiOutlineLoading3Quarters } from 'react-icons/ai';
+import './Card.css';
 
 const Card = (props) => {
   const bkList = props;
