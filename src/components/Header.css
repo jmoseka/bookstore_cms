@@ -1,3 +1,7 @@
 header {
     height: 16vh;
 }
+
+.nav {
+    cursor: pointer;
+}
