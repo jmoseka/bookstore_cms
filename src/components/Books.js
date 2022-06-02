@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import Form from './Form';
 import './Book.css';
 
@@ -26,8 +27,15 @@ const Books = (props) => {
         </div>
 
         <div className="chapter-box d-flex justify-content-between">
-          <div className="completed-box align-self-center">
-            Loading
+          <div className="progress-container align-self-center d-flex align-items-center justify-content-between">
+            <div className="progress-icon">
+              <AiOutlineLoading3Quarters />
+            </div>
+
+            <div className="percent-info">
+              <p className="progress-value">64%</p>
+              <p className="progress-completed">Completed</p>
+            </div>
           </div>
 
           <div className="chapter-info d-flex flex-column justify-content-between">

@@ -44,3 +44,19 @@ p {
  .hz-line {
      border: 1px solid black;
  }
+
+ .progress-icon {
+     font-size: 3.9rem;
+ }
+
+ .progress-container {
+     gap: 0.6rem;
+ }
+
+ .progress-value {
+     font-size: 1.4rem;
+ }
+
+ .progress-completed {
+     font-size: 0.8rem;
+ }
