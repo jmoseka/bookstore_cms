@@ -1,0 +1,12 @@
+header {
+  height: 16vh;
+}
+
+.nav {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

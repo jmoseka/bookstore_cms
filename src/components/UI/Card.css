@@ -1,0 +1,64 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.4rem;
+  margin: 1rem 0;
+}
+
+p {
+  margin: 0;
+}
+
+.book-title {
+  font-size: 1.3rem;
+  margin: 0;
+  padding: 0;
+  line-height: 1.5rem;
+  font-weight: bold;
+}
+
+.list-options {
+  width: 50%;
+  padding: 0.7rem 0;
+}
+
+.list-options li {
+  padding-right: 0.5rem;
+}
+
+.list-options li:not(:first-child):not(:last-child) {
+  padding: 0 0.7rem 0 0.7rem;
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+
+.desc-box {
+  flex: 1.5;
+}
+
+.chapter-box {
+  flex: 1.6;
+  flex-wrap: wrap;
+}
+
+.hz-line {
+  border: 1px solid black;
+}
+
+.progress-icon {
+  font-size: 3.9rem;
+}
+
+.progress-container {
+  gap: 0.6rem;
+}
+
+.progress-value {
+  font-size: 1.4rem;
+}
+
+.progress-completed {
+  font-size: 0.8rem;
+}

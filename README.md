@@ -7,6 +7,8 @@ Bookstore content management system
 - React
 - Webpack
 
+## Screenshot
+<img src="./src/assets/screenshot.PNG">
 ## Setup
 
 ### Clone this repository

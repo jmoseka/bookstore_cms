@@ -1,0 +1,18 @@
+form {
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.input-title {
+  flex: 2;
+  padding: 0.5rem;
+}
+
+.category {
+  flex: 2rem;
+}
+
+.submit {
+  padding: 0.5rem;
+  flex: 1rem;
+}
