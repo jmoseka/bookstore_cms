@@ -1,19 +1,16 @@
-import { createSlice } from '@reduxjs/toolkit';
+// action types
+const CHECK_STATUS = 'bookstore_cms/bookReducer/checkStatus';
 
-export const categorySlice = createSlice({
-  name: 'checkStatus',
-  initialState: [],
-  reducers: {
-    checkStatus: (state, action) => {
-      const checkStat = {
-        name: action.payload.task,
-      };
-      state.push(checkStat);
-    },
-
-  },
+export const checkStat = () => ({
+  type: CHECK_STATUS,
 });
 
-export const { checkStat } = categorySlice.actions;
-
-export default categorySlice.reducer;
+const initialState = 'Under Construction 🏗';
+export default function statusReducer(state = initialState, action) {
+  switch (action.type) {
+    case CHECK_STATUS:
+      return state;
+    default:
+      return state;
+  }
+}
