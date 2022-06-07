@@ -5,11 +5,11 @@ export const checkStat = () => ({
   type: CHECK_STATUS,
 });
 
-const initialState = 'Under Construction 🏗';
+const initialState = [];
 export default function statusReducer(state = initialState, action) {
   switch (action.type) {
     case CHECK_STATUS:
-      return state;
+      return 'Under Construction 🏗';
     default:
       return state;
   }
