@@ -1,20 +1,22 @@
-import { createSlice } from '@reduxjs/toolkit';
+// action types
+const ADD_BOOK = 'bookstore_cms/bookReducer/checkStatus';
+const DELETE_BOOK = 'bookstore_cms/bookReducer/checkStatus';
 
-export const bookSlice = createSlice({
-  name: 'bookItem',
-  initialState: [],
-  reducers: {
-    addBookItem: (state, action) => {
-      const newBookItem = {
-        id: Math.floor(Math.random() * 1000),
-        name: action.payload.task,
-      };
-      state.push(newBookItem);
-    },
-    deleteBookItem: (state, action) => state.filter((item) => item.id !== action.payload.id),
-  },
-});
+const initialState = [];
 
-export const { addBookItem, deleteBookItem } = bookSlice.actions;
-
-export default bookSlice.reducer;
+export default function bookReducer(state = initialState, action) {
+  switch (action.type) {
+    case ADD_BOOK:
+      return [
+        ...state,
+        {
+          id: Math.floor(Math.random() * 1000),
+          name: action.payload.task,
+        },
+      ];
+    case DELETE_BOOK:
+      return state.filter((item) => item.id !== action.payload.id);
+    default:
+      return initialState;
+  }
+}
