@@ -5,11 +5,11 @@ export const bookSlice = createSlice({
   initialState: [],
   reducers: {
     addBookItem: (state, action) => {
-      const newTask = {
+      const newBookItem = {
         id: Math.floor(Math.random() * 1000),
         name: action.payload.task,
       };
-      state.push(newTask);
+      state.push(newBookItem);
     },
     deleteBookItem: (state, action) => state.filter((item) => item.id !== action.payload.id),
   },
