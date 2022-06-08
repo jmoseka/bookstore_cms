@@ -34,6 +34,11 @@ p {
   border-left: 1px solid black;
 }
 
+.list-options li button {
+  background: none;
+  border: none;
+}
+
 .desc-box {
   flex: 1.5;
 }
