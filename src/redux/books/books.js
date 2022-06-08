@@ -2,9 +2,6 @@
 const ADD_BOOK = 'bookstore_cms/bookReducer/checkStatus';
 const DELETE_BOOK = 'bookstore_cms/bookReducer/checkStatus';
 
-const initialState = {
-};
-
 export const addBook = (id, title, author) => ({
   type: ADD_BOOK,
   book: {
@@ -21,7 +18,7 @@ export const removeBook = (id) => ({
   },
 });
 
-export default function bookReducer(state = initialState, action) {
+export default function bookReducer(state = {}, action) {
   switch (action.type) {
     case ADD_BOOK:
       return {
@@ -31,6 +28,6 @@ export default function bookReducer(state = initialState, action) {
     case DELETE_BOOK:
       return state.filter((item) => item.id !== action.book.id);
     default:
-      return initialState;
+      return state;
   }
 }
