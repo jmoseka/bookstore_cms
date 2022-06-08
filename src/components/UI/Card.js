@@ -2,8 +2,10 @@ import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 import './Card.css';
 
 const Card = (props) => {
-  const bkList = props;
-  const { title, author } = bkList.bookList;
+  const prop = props;
+  const { bookList, handleRemove } = prop;
+  const { title, author } = bookList;
+
   return (
     <div className="card">
       <div className="desc-box">
@@ -15,9 +17,9 @@ const Card = (props) => {
 
         <div className="desc-option">
           <ul className="list-unstyled d-flex m-0 list-options justify-content-between">
-            <li>Comments</li>
-            <li>Remove</li>
-            <li>Edit</li>
+            <li><button type="button">Comments</button></li>
+            <li><button type="button" onClick={handleRemove}> Remove </button></li>
+            <li><button type="button">Edit</button></li>
           </ul>
         </div>
       </div>
