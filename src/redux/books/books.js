@@ -1,32 +1,26 @@
 // action types
-const ADD_BOOK = 'bookstore_cms/bookReducer/checkStatus';
+const ADD_BOOK = 'bookstore_cms/bookReducer/books';
 const DELETE_BOOK = 'bookstore_cms/bookReducer/checkStatus';
 
-export const addBook = (id, title, author) => ({
+export const addBook = (payload) => ({
   type: ADD_BOOK,
-  book: {
-    id,
-    title,
-    author,
-  },
+  payload,
 });
 
 export const removeBook = (id) => ({
   type: DELETE_BOOK,
-  book: {
-    id,
-  },
+  id,
 });
 
-export default function bookReducer(state = {}, action) {
+export default function bookReducer(state = [], action) {
   switch (action.type) {
     case ADD_BOOK:
-      return {
+      return [
         ...state,
-        newBook: action.newBook,
-      };
+        action.payload,
+      ];
     case DELETE_BOOK:
-      return state.filter((item) => item.id !== action.book.id);
+      return [...state].filter((item) => item.id !== action.id);
     default:
       return state;
   }
