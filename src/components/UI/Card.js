@@ -31,7 +31,7 @@ const Card = (props) => {
           </div>
 
           <div className="percent-info">
-            <p className="progress-value">64%</p>
+            <p className="progress-value">65%</p>
             <p className="progress-completed">Completed</p>
           </div>
         </div>
