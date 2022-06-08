@@ -2,20 +2,34 @@
 const ADD_BOOK = 'bookstore_cms/bookReducer/checkStatus';
 const DELETE_BOOK = 'bookstore_cms/bookReducer/checkStatus';
 
-const initialState = [];
+const initialState = {
+};
+
+export const addBook = (id, title, author) => ({
+  type: ADD_BOOK,
+  book: {
+    id,
+    title,
+    author,
+  },
+});
+
+export const removeBook = (id) => ({
+  type: DELETE_BOOK,
+  book: {
+    id,
+  },
+});
 
 export default function bookReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
-      return [
+      return {
         ...state,
-        {
-          id: Math.floor(Math.random() * 1000),
-          name: action.payload.task,
-        },
-      ];
+        newBook: action.newBook,
+      };
     case DELETE_BOOK:
-      return state.filter((item) => item.id !== action.payload.id);
+      return state.filter((item) => item.id !== action.book.id);
     default:
       return initialState;
   }
