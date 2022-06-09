@@ -6,6 +6,9 @@ import Card from '../UI/Card';
 
 const Books = (props) => {
   const bkList = props;
+  bkList.bookList.map((item) => (
+    console.log(item)
+  ));
   const dispatch = useDispatch();
 
   const handleRemove = (id) => {
