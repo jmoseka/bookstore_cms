@@ -11,12 +11,6 @@ function BookContainer() {
   }, []);
 
   const books = useSelector((state) => state.books);
-  /* const fetchProducts = async () => {
-    const response = await axios
-      .get('https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/y71lPWQZpWQZY5S21Mzu/books');
-      .catch(() => {});
-    dispatch(addBook(response.data));
-  }; */
   return (
     <div className="col-11">
       <main className="card-container" />
