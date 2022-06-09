@@ -47,6 +47,15 @@ export const postBook = (book) => async (dispatch) => {
   }
 };
 
+export const removeSelectedBook = (id) => async (dispatch) => {
+  try {
+    await axios.delete(`${url}/${id}`);
+    dispatch(removeBook(id));
+  } catch (error) {
+    <h2>{error}</h2>;
+  }
+};
+
 export default function bookReducer(state = [], action) {
   switch (action.type) {
     case GET_BOOK:
