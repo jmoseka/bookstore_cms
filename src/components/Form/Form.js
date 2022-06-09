@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import './Form.css';
 import { useDispatch } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
-import { addBook } from '../../redux/books/books';
+import { postBook } from '../../redux/books/books';
 
 const Form = () => {
   // const book = useSelector((state) => state.bookReducer.book);
@@ -13,10 +13,11 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(addBook({
-      id: uuidv4(),
+    dispatch(postBook({
+      item_id: uuidv4(),
       title: titleRef.current.value,
       author: authorRef.current.value,
+      category: 'No category',
     }));
     titleRef.current.value = '';
     authorRef.current.value = '';

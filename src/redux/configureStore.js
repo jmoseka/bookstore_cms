@@ -1,5 +1,5 @@
-import { combineReducers } from 'redux';
-import { configureStore } from '@reduxjs/toolkit';
+import { combineReducers, applyMiddleware, createStore } from 'redux';
+import thunk from 'redux-thunk';
 import bookReducer from './books/books';
 import checkStatusReducer from './categories/categories';
 
@@ -7,7 +7,6 @@ const rootReducer = combineReducers({
   books: bookReducer,
   categories: checkStatusReducer,
 });
-
-const store = configureStore({ reducer: rootReducer });
+const store = createStore(rootReducer, applyMiddleware(thunk));
 
 export default store;
