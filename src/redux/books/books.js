@@ -38,6 +38,15 @@ export const fetchBook = () => async (dispatch) => {
   }
 };
 
+export const postBook = (book) => async (dispatch) => {
+  try {
+    await axios.post(url, book);
+    dispatch(addBook(book));
+  } catch (error) {
+    <h2>{error}</h2>;
+  }
+};
+
 export default function bookReducer(state = [], action) {
   switch (action.type) {
     case GET_BOOK:
