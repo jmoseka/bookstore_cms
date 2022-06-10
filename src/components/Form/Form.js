@@ -27,6 +27,7 @@ const Form = () => {
   return (
     <form onSubmit={(e) => handleSubmit(e)} className="d-flex justify-content-between">
       <input ref={titleRef} className="input-title" placeholder="Book title" />
+      <input ref={authorRef} className="input-author" placeholder="Book author" />
       <select ref={catRef} className="category">
         <option defaultValue={' '}>Category</option>
         <option value="Action">Action</option>
@@ -36,7 +37,6 @@ const Form = () => {
         <option value="Sci-fi">Sci-Fi</option>
         <option value="Suspense">Suspense</option>
       </select>
-      <input ref={authorRef} className="input-author" placeholder="Book author" />
       <button
         className="submit"
         type="submit"

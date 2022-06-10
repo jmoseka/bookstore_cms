@@ -19,6 +19,15 @@ p {
   font-weight: bold;
 }
 
+.book-category {
+  color: #525151;
+  font-weight: bold;
+}
+
+.book-author {
+  color: #0290ff;
+}
+
 .list-options {
   width: 50%;
   padding: 0.7rem 0;
@@ -30,13 +39,14 @@ p {
 
 .list-options li:not(:first-child):not(:last-child) {
   padding: 0 0.7rem 0 0.7rem;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
+  border-right: 1px solid #0290ff;
+  border-left: 1px solid #0290ff;
 }
 
 .list-options li button {
   background: none;
   border: none;
+  color: #0290ff;
 }
 
 .desc-box {
@@ -48,12 +58,23 @@ p {
   flex-wrap: wrap;
 }
 
+.current-chapter {
+  color: #848484;
+}
+
+.updateProgress {
+  background: #0290ff;
+  color: white;
+  border: none;
+}
+
 .hz-line {
   border: 1px solid black;
 }
 
 .progress-icon {
   font-size: 3.9rem;
+  color: #0290ff;
 }
 
 .progress-container {

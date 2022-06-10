@@ -9,6 +9,7 @@ Bookstore content management system
 
 ## Screenshot
 <img src="./src/assets/screenshot.PNG">
+
 ## Setup
 
 ### Clone this repository

@@ -4,15 +4,21 @@ form {
 }
 
 .input-title {
-  flex: 2;
+  flex: 15%;
   padding: 0.5rem;
 }
 
 .category {
-  flex: 2rem;
+  flex: 10%;
+}
+
+.input-author {
+  flex: 15%;
 }
 
 .submit {
-  padding: 0.5rem;
-  flex: 1rem;
+  flex: 5%;
+  background: #0290ff;
+  color: white;
+  border: none;
 }
