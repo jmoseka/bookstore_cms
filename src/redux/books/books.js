@@ -4,7 +4,7 @@ import axios from 'axios';
 const GET_BOOK = 'bookstore_cms/bookReducer/books';
 const ADD_BOOK = 'bookstore_cms/bookReducer/addBook';
 const DELETE_BOOK = 'bookstore_cms/bookReducer/checkStatus';
-const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/5YW2OgDLnSBnM7Xf2ZfG/books';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/YKw1fsPIBZpB37RMuwiJ/books';
 
 export const getBook = (payload) => ({
   type: GET_BOOK,
