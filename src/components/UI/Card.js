@@ -4,13 +4,13 @@ import './Card.css';
 const Card = (props) => {
   const prop = props;
   const { bookList, handleRemove } = prop;
-  const { title, author } = bookList;
+  const { title, author, category } = bookList;
 
   return (
     <div className="card">
       <div className="desc-box">
         <div className="desc">
-          <p>Action</p>
+          <p>{category}</p>
           <p className="book-title">{title}</p>
           <p className="book-author">{author}</p>
         </div>

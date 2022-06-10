@@ -1,10 +1,19 @@
-// action types
-const ADD_BOOK = 'bookstore_cms/bookReducer/books';
-const DELETE_BOOK = 'bookstore_cms/bookReducer/checkStatus';
+import axios from 'axios';
 
-export const addBook = (payload) => ({
-  type: ADD_BOOK,
+// action types
+const GET_BOOK = 'bookstore_cms/bookReducer/books';
+const ADD_BOOK = 'bookstore_cms/bookReducer/addBook';
+const DELETE_BOOK = 'bookstore_cms/bookReducer/checkStatus';
+const url = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/YKw1fsPIBZpB37RMuwiJ/books';
+
+export const getBook = (payload) => ({
+  type: GET_BOOK,
   payload,
+});
+
+export const addBook = (book) => ({
+  type: ADD_BOOK,
+  book,
 });
 
 export const removeBook = (id) => ({
@@ -12,15 +21,52 @@ export const removeBook = (id) => ({
   id,
 });
 
+export const fetchBook = () => async (dispatch) => {
+  try {
+    const response = await axios.get(url);
+    const data = await response.data;
+    const books = [];
+    Object.entries(data).forEach((el) => {
+      books.push({
+        item_id: el[0],
+        ...el[1][0],
+      });
+    });
+    dispatch(getBook(books));
+  } catch (error) {
+    <h2>{error}</h2>;
+  }
+};
+
+export const postBook = (book) => async (dispatch) => {
+  try {
+    await axios.post(url, book);
+    dispatch(addBook(book));
+  } catch (error) {
+    <h2>{error}</h2>;
+  }
+};
+
+export const removeSelectedBook = (id) => async (dispatch) => {
+  try {
+    await axios.delete(`${url}/${id}`);
+    dispatch(removeBook(id));
+  } catch (error) {
+    <h2>{error}</h2>;
+  }
+};
+
 export default function bookReducer(state = [], action) {
   switch (action.type) {
+    case GET_BOOK:
+      return action.payload;
     case ADD_BOOK:
       return [
         ...state,
-        action.payload,
+        action.book,
       ];
     case DELETE_BOOK:
-      return [...state].filter((item) => item.id !== action.id);
+      return [...state].filter((item) => item.item_id !== action.id);
     default:
       return state;
   }
