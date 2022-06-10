@@ -10,3 +10,18 @@ a {
   text-decoration: none;
   color: black;
 }
+
+.heading {
+  color: #0290ff;
+  font-weight: bold;
+}
+
+.nav-book {
+  color: #646464;
+  font-weight: 500;
+}
+
+.nav-categories {
+  color: #bcbcbc;
+  font-weight: 500;
+}

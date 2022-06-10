@@ -10,13 +10,17 @@ function BookContainer() {
     dispatch(fetchBook());
   }, []);
 
+  const style = {
+    color: '#3286d1',
+  };
+
   const books = useSelector((state) => state.books);
   return (
     <div className="col-11">
       <main className="card-container" />
       <Books bookList={books} />
       <div className="hz-line my-5" />
-      <h5>ADD NEW BOOK</h5>
+      <h5 style={style}>ADD NEW BOOK</h5>
       <Form />
     </div>
   );

@@ -10,7 +10,7 @@ const Card = (props) => {
     <div className="card">
       <div className="desc-box">
         <div className="desc">
-          <p>{category}</p>
+          <p className="book-category">{category}</p>
           <p className="book-title">{title}</p>
           <p className="book-author">{author}</p>
         </div>
@@ -38,10 +38,10 @@ const Card = (props) => {
 
         <div className="chapter-info d-flex flex-column justify-content-between">
           <div>
-            <p>CURRENT CHAPTER</p>
-            <p>Chapter 17</p>
+            <p className="current-chapter">CURRENT CHAPTER</p>
+            <p className="chapter-no">Chapter 17</p>
           </div>
-          <button type="button">UPDATE PROGRESS</button>
+          <button className="updateProgress p-1" type="button">UPDATE PROGRESS</button>
         </div>
       </div>
     </div>
